@@ -16,3 +16,8 @@ k<-list(name="Joe",salary=55000,union=T,hrsthismoth=2)
 class(k)<-c("hrsthismoth","employee")
 attributes(k)
 print(k)
+#上三角矩阵类的定义
+sum1toi<-function(i){
+  return(i*(i+1)/2)
+}
+
