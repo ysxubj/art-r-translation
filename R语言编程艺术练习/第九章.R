@@ -1,0 +1,18 @@
+######################第九章#########################
+#面向对象的编程思想
+j<-list(name="Joe",salary=55000,union=T)
+class(j)<-"employee"#给类j定名字
+attributes(j)#对定义的类进行检查
+print.employee<-function(wrkr){
+  cat(wrkr$name,"\n")
+  cat("salary",wrkr$salary,"\n")
+  cat("union",wrkr$union,"\n")
+}#对该类自定义print的泛函数打印方法
+methods(,"employee")
+methods(print)
+print(j)#泛函数已经发挥作用，对类调用了print.employee
+#类的继承
+k<-list(name="Joe",salary=55000,union=T,hrsthismoth=2)
+class(k)<-c("hrsthismoth","employee")
+attributes(k)
+print(k)
